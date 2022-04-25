@@ -1,0 +1,25 @@
+.bloc-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #303030;
+    padding-bottom: 30px;
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        color: $white;
+        margin: 0; 
+        padding: 20px 0 0 20px;    
+    }
+    &__icone {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        color: $white;
+        height: 30px;
+    }
+    &__text {
+        color: $white;
+        padding-left: 20px;
+        height: 15px;
+    }
+}

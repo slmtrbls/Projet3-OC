@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+}
+
+.location {
+  background-color: #eaeaea;
+}
+.location__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location__text {
+  margin-left: 10px;
+}
+.location a {
+  text-decoration: none;
+  color: black;
+}/*# sourceMappingURL=header.css.map */

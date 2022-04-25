@@ -1,0 +1,168 @@
+.menu{
+    position: relative;
+    background-color: #ececec;
+    border-radius: 45px 45px 0px 0px;
+    margin-top: -50px;
+    padding-bottom: 50px;
+    height: auto;
+    padding-left: 20px;
+    
+    &__entree{
+        display: flex;  
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+    &__heart {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--icone {
+            height: 10px;
+            padding: 30px 30px 0 0;
+        }
+        &--effect {
+            display: none;
+        }
+    }
+    &__title{
+        font-family: 'Shrikhand', cursive;
+        font-weight: lighter;  
+    }
+    &__line{
+        border-bottom:  solid 5px $minth;
+        width: 30px;
+        padding-top: 15px;    
+        &--text{
+            text-transform: uppercase;
+            font-weight: normal;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+    }
+    &__bloc{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background: $white;
+        height: 70px;
+        max-width: 400px;
+        width: 100%;
+        margin-right: 20px; 
+        margin-top: 15px;
+        overflow: hidden;
+        @include border;
+        @include box-shadow;
+
+        animation: appear 2s ease-in backwards;
+
+        &:hover > .menu__bloc--effect{
+            transform: translateX(0px);
+            cursor: pointer;
+        }  
+
+        &:hover > .menu__prix{
+            transform: translateX(-65px);
+            padding-left: 65px;
+       }
+       &:hover .menu__bloc--icone {
+            transform: rotate(0);
+    }
+       
+
+        &--detail{
+            margin-left: 10px;
+            margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 310px;
+
+        }
+
+        &--effect{
+            position: absolute;
+            background-color: $minth;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 65px;
+            border-radius: 0px 20px 20px 0px;
+            transform-origin: right 50%;
+            transform: translateX(65px);
+            transition-duration: 1s;
+           
+        }
+
+        &--icone{
+            position: absolute;
+            left: 17px;
+            top: 22px;
+            font-size: 30px;
+            color: $white;
+            opacity: 1;
+            transform: rotate(360deg);
+            transition-duration: 1s;
+        }
+    
+    }
+   
+    &__prix{
+        display: flex;
+        align-items: flex-end;
+        font-weight: bold;
+        width: 50px;
+        transition-duration: 1s;
+    
+    }
+    
+}
+
+.bloc-detail__title{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+
+}
+.bloc-detail__text{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    margin-top: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+     
+}
+.menu-buton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0 0 0;
+    &__text {
+        background: linear-gradient(to bottom right, $pink, $purple);
+        color: $white;
+        border-radius: 25px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menu__entree{
+        flex-wrap: wrap;
+    }
+
+   .bloc{
+       padding-left: 20px;
+   }
+   .bloc-detail__title{
+        font-size: 15px;
+}
+    .bloc-detail__text{
+        font-size: 13px;
+        
+} 
+
+}

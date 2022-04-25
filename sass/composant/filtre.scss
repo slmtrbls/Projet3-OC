@@ -1,0 +1,58 @@
+.bloc-filtre{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.filtre{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    &__title {
+        padding-left: 20px;
+    }
+    
+
+    &__resto{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 330px;
+        height: 70px;
+        background: #f6f6f6;
+        border-radius: 20px;
+        @include box-shadow;
+
+        &:hover{
+            background-color: #f3ecf5;
+        }
+
+        &--text{
+            font-weight: 600;
+            padding: 10px;
+            color: black;
+
+        }
+        &--blocNum{
+            position: relative;
+            margin-left: -15px;
+            height: 27px;
+            width: 27px;
+            background: $purple;
+            border-radius: 20px;
+        }
+        
+        &--num{
+            margin: 4px 0 0 9px;
+            color: $white;
+        }
+        
+    }
+
+    &__resto:hover{
+        cursor: pointer;
+       
+    }
+  
+}
