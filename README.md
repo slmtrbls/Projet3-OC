@@ -1,1 +1,1 @@
-# Projet3-OC
+Projet 3 Open Classrooms - Dynamiser une page web avec des animations CSS
