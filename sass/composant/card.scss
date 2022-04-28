@@ -15,7 +15,7 @@
         box-shadow: 3px 3px 3px lightgrey;
         & .new {
             position:absolute;
-            z-index: 999;                         
+            z-index: 2;                         
             top: 15px;
             right: 15px; 
             padding: 5px;                                         
@@ -40,17 +40,44 @@
                 margin: 5px 0 5px 10px;
             }
             & .heart {
+                position:relative;
                 display: flex;
                 justify-content: center;
                 text-align: center;
                 &__icone {
-                z-index: 1;
-                margin: 15px 20px 0 0;
+                position:absolute;
+                opacity: 1;
+                bottom: 25px;
+                right: 25px;
+                width: 15px;
+                height: 15px;
                 }                            
                 &__effect {
-                display: none;
+                position: absolute;
+                opacity: 0;
+                width: 15px;
+                height: 15px;
+                bottom: 5px;
+                right: 5px;
+                background: linear-gradient(to bottom right, $pink, $purple);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
+                }
+                &:hover {
+                    & .heart__effect {
+                        animation: heart 1s ease forwards;
+                    }
+                    & .heart__icone {
+                        opacity: 0;
+                    }
                 }
             }
         }
     }
+}
+@keyframes heart {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
