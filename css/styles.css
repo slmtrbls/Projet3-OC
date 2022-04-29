@@ -67,6 +67,9 @@
   border-radius: 25px;
   padding: 15px;
 }
+.header-buton:hover {
+  transform: scale(1.15);
+}
 
 /**********  FONT  ****************/
 h1, h2, h3, p {
@@ -161,7 +164,7 @@ a {
 }
 .bloc__card .new {
   position: absolute;
-  z-index: 999;
+  z-index: 2;
   top: 15px;
   right: 15px;
   padding: 5px;
@@ -187,18 +190,47 @@ a {
   margin: 5px 0 5px 10px;
 }
 .bloc__card--detail .heart {
+  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
 }
 .bloc__card--detail .heart__icone {
-  z-index: 1;
-  margin: 15px 20px 0 0;
+  position: absolute;
+  opacity: 1;
+  bottom: 25px;
+  right: 25px;
+  width: 15px;
+  height: 15px;
 }
 .bloc__card--detail .heart__effect {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  bottom: 5px;
+  right: 5px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.bloc__card--detail .heart:hover .heart__effect {
+  animation: heart 1s ease forwards;
+}
+.bloc__card--detail .heart:hover .heart__icone {
+  opacity: 0;
 }
 
+@keyframes heart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .bloc-footer {
   display: flex;
   flex-direction: column;
@@ -253,16 +285,37 @@ a {
   }
 }
 .menu__heart {
+  position: relative;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  text-align: center;
 }
 .menu__heart--icone {
-  height: 10px;
-  padding: 30px 30px 0 0;
+  position: absolute;
+  opacity: 1;
+  top: 30px;
+  right: 30px;
+  width: 15px;
+  height: 15px;
 }
 .menu__heart--effect {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.menu__heart:hover .menu__heart--effect {
+  animation: heart 1s ease forwards;
+}
+.menu__heart:hover .menu__heart--icone {
+  opacity: 0;
 }
 .menu__title {
   font-family: "Shrikhand", cursive;
@@ -372,6 +425,9 @@ a {
   border-radius: 25px;
   padding: 15px;
 }
+.menu-buton:hover {
+  transform: scale(1.15);
+}
 
 @media screen and (max-width: 400px) {
   .menu__entree {
@@ -388,6 +444,78 @@ a {
 
   .bloc-detail__text {
     font-size: 13px;
+  }
+}
+.loader {
+  z-index: 9999;
+  background-color: #ffffff;
+  opacity: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  animation: bg 3s ease forwards;
+}
+.loader__anim {
+  border-top: 10px solid #FF79DA;
+  border-right: 10px solid #99E2D0;
+  border-bottom: 10px solid #9356DC;
+  border-left: 10px solid #99E2D0;
+  border-radius: 50%;
+  display: block;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  opacity: 1;
+  position: absolute;
+  top: 45%;
+  right: 46%;
+  animation: spin 3s ease forwards;
+}
+@media (max-width: 400px) {
+  .loader__anim {
+    top: 50%;
+    right: 35%;
+  }
+}
+
+@keyframes bg {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  95% {
+    width: 100%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: rotate(-360deg);
+  }
+  66% {
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes appear {
