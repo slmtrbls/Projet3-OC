@@ -471,15 +471,12 @@ a {
   z-index: 1;
   opacity: 1;
   position: absolute;
-  top: 45%;
-  right: 46%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
   animation: spin 3s ease forwards;
-}
-@media (max-width: 400px) {
-  .loader__anim {
-    top: 50%;
-    right: 35%;
-  }
 }
 
 @keyframes bg {

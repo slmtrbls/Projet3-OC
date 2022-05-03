@@ -11,10 +11,10 @@
     display: flex;
     animation : bg 3s ease forwards;
     &__anim {
-        border-top: 10px solid $pink;
-        border-right: 10px solid $minth;
-        border-bottom: 10px solid $purple;
-        border-left: 10px solid $minth;
+        border-top: 10px solid $clr-secondary;
+        border-right: 10px solid $clr-tertiary;
+        border-bottom: 10px solid $clr-primary;
+        border-left: 10px solid $clr-tertiary;
         border-radius: 50%;
         display: block;
         width: 100px;
@@ -22,14 +22,13 @@
         z-index: 1;
         opacity: 1;
         position: absolute;
-        top: 45%;
-        right: 46%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
         animation: spin 3s ease forwards;
-        @media (max-width: 400px) {
-            top: 50%;
-            right: 35%;
         }
-    }
 }
 
 @keyframes bg {
@@ -56,8 +55,5 @@
         opacity: 1;
         transform: rotate(720deg)}
     95% {opacity: 0;}
-    100% {
-        ;
-        opacity: 0;
-        }
+    100% {opacity: 0;}
 }

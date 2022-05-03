@@ -19,9 +19,9 @@
             top: 15px;
             right: 15px; 
             padding: 5px;                                         
-            background-color: $minth;
+            background-color: $clr-tertiary;
             &__text {
-                color: darken($minth, 30%);
+                color: darken($clr-tertiary, 30%);
                 font-family: 'roboto';
                 font-weight: bold;                
             }
@@ -59,7 +59,7 @@
                 height: 15px;
                 bottom: 5px;
                 right: 5px;
-                background: linear-gradient(to bottom right, $pink, $purple);
+                background: linear-gradient(to bottom right, $clr-secondary, $clr-primary);
                 -webkit-background-clip: text;
                 -moz-background-clip: text;
                 -webkit-text-fill-color: transparent;

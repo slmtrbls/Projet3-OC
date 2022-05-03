@@ -33,7 +33,7 @@
         height: 15px;
         top: 10px;
         right: 10px;
-        background: linear-gradient(to bottom right, $pink, $purple);
+        background: linear-gradient(to bottom right, $clr-secondary, $clr-primary);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -53,7 +53,7 @@
         font-weight: lighter;  
     }
     &__line{
-        border-bottom:  solid 5px $minth;
+        border-bottom:  solid 5px $clr-tertiary;
         width: 30px;
         padding-top: 15px;    
         &--text{
@@ -105,7 +105,7 @@
 
         &--effect{
             position: absolute;
-            background-color: $minth;
+            background-color: $clr-tertiary;
             top: 0;
             bottom: 0;
             right: 0;
@@ -165,7 +165,7 @@
     align-items: center;
     padding: 35px 0 0 0;
     &__text {
-        background: linear-gradient(to bottom right, $pink, $purple);
+        background: linear-gradient(to bottom right, $clr-secondary, $clr-primary);
         color: $white;
         border-radius: 25px;
         padding: 15px;

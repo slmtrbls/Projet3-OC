@@ -64,7 +64,7 @@
     justify-content: center;
     align-items: center;
     &__text {
-        background: linear-gradient(to bottom right, $pink, $purple);
+        background: linear-gradient(to bottom right, $clr-secondary, $clr-primary);
         color: $white;
         border-radius: 25px;
         padding: 15px;
