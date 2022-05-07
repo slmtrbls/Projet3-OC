@@ -274,7 +274,7 @@ a {
   margin-top: -50px;
   padding-bottom: 50px;
   height: auto;
-  padding-left: 20px;
+  padding: 0 20px;
 }
 .menu__entree {
   display: flex;
